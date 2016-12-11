@@ -1,6 +1,5 @@
 html,body{
 	background-color: #c1192d;
-	padding-bottom: 205px;
 }
 
 
@@ -11,8 +10,5 @@ html,body{
 footer {
 	width: 100%;
 	height: 205px;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
 	background: url('/images/footer_cloud.png');
 }
