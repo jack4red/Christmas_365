@@ -51,7 +51,7 @@ html,body{
 }
 
 .header .complex-snow-ground .hint-introductions strong {
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 	font-size: 26px;
 	color: #c0192d;
 }
@@ -107,6 +107,52 @@ html,body{
 	padding-top: 200px;
 }
 
+.main-container .prize-contianer {
+	width: 1000px;
+	min-height: 400px;
+	margin: 10px auto 0 auto;
+}
+
+.main-container .prize-contianer .prize-info-window{
+	position: relative;
+	background-color: #f64a43;
+	border-radius: 5px;
+	float: left;
+	width: 657px;
+	height: 367px;
+	border-bottom: 10px solid #ac1a09;
+	border-left: 10px solid #ac1a09;
+	padding: 70px 0 50px 25px;
+}
+
+.main-container .prize-contianer .prize-info-window .prize-info-title{
+	position: absolute;
+	left: 150px;
+	top: -88px;
+}
+
+.main-container .prize-contianer .prize-info-window table {
+	width: 485px;
+	text-indent: 10px;
+	font-size: 18px;
+	color: #ffe1b2;
+}
+
+.main-container .prize-contianer .prize-info-window table tr {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	height: 60px;
+}
+
+.main-container .prize-contianer .prize-info-window table tr td:nth-child(2){
+	color:#fbe600;
+}
+
+.main-container .prize-contianer .prize-roll{
+	margin-left: 600px;
+	width: 570px;
+	height: 605px;
+}
 
 footer {
 	position: absolute;
@@ -116,5 +162,5 @@ footer {
 	overflow: hidden;
 	background-repeat: no-repeat;
     background-size: contain;
-	background-color: #fec101;
+	/*background-color: #fec101;*/
 }
