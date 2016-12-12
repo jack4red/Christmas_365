@@ -1,9 +1,17 @@
 html,body {
 	background-color: #c1192d;
 	position: relative;
-	/*background-image: url('/images/snow_background.png');*/
-	min-width: 2000px;
+	min-width: 1800px;
 	font-family: '微软雅黑';
+}
+
+.snow-bg {
+	background-image: url('/images/snow-bg.png');
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .header {
