@@ -169,7 +169,7 @@ html,body {
 
 .main-container .activity-details-contianer .activity-details {
 	width: 983px;
-	height: 885px;
+	height: 915px;
 	padding: 0 35px;
 	background-color: #f64a43;
 }
@@ -203,6 +203,39 @@ html,body {
 	border-bottom: 1px dotted white;
 	width:100%;
 	margin: 42px 0 36px 0;
+}
+
+.main-container .activity-details-contianer .activity-details .specially-explained-text {
+	width: 60%;
+	height: auto;
+}
+
+.main-container .activity-details-contianer .activity-details .specially-explained .specially-explained-text div {
+	margin-bottom: 20px;
+	text-indent: 40px;
+	font-size: 20px;
+	color: white;
+}
+
+.main-container .activity-details-contianer .activity-details .specially-explained .specially-explained-text .specially-explained-text-title {
+	font-size: 24px;
+	color: #fec101;
+}
+
+.main-container .activity-details-contianer .activity-details .qr-code {
+	width: 200px;
+	float: right;
+	margin-right: 54px;
+}
+
+.main-container .activity-details-contianer .activity-details .qr-code .qr-introduction {
+	font-size: 16px;
+	color: #fedaad;
+	text-align: center;
+}
+
+.main-container .activity-details-contianer .activity-details .qr-code img {
+	margin-bottom: 10px;
 }
 
 footer {
