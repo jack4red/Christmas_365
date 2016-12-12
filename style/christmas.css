@@ -2,14 +2,15 @@ html,body{
 	background-color: #c1192d;
 	position: relative;
 	/*background-image: url('/images/snow_background.png');*/
-	min-width: 1500px;
+	min-width: 2000px;
+	font-family: '微软雅黑';
 }
 
 .header {
 	position: relative;
 	background-image: url('/images/header_background.png');
 	width: 100%;
-	height: 595px;
+	min-height: 595px;
 }
 
 .header .top-star {
@@ -24,9 +25,79 @@ html,body{
 	background-repeat: no-repeat;
     background-size: contain;
 	position: absolute;
-	bottom: -200px;
+	bottom: -120px;
 	width: 100%;
 	height: 465px;
+}
+
+.header .complex-snow-ground .hint-introductions {
+	width: 740px;
+	height: 70px;
+	margin: 255px auto 25px auto;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.header .complex-snow-ground .hint-introductions:before {
+	content: '';
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-image: url('/images/red_star.png');
+	margin-right: 15px;
+	position: relative;
+	top:5px;
+}
+
+.header .complex-snow-ground .hint-introductions strong {
+	font-weight: bolder;
+	font-size: 26px;
+	color: #c0192d;
+}
+
+.header .complex-snow-ground .publish-button {
+	margin: 0 auto;
+	width: 205px;
+	height: 55px;
+	border-radius: 30px;
+	line-height: 55px;
+	border-bottom: 5px solid #ac1a09;
+	text-align: center;
+	cursor: pointer;
+	font-size: 22px;
+	color: white;
+	background-color: #f64a43;
+}
+
+.header .gift-title {
+	width: 986px;
+	height: 230px;
+	background-image: url('/images/gift_title.png');
+	margin: -58px auto 0 auto;
+}
+
+.header .hint-title {
+	width: 978px;
+	height: 80px;
+	margin: 0 auto;
+	background-image: url('/images/hint.png');
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #feed02;
+	margin-top: 5px;
+}
+
+.header .hint-title:before {
+	content: '';
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+	margin-right: 20px;
+    position: relative;
+    top: 10px;
+	background-image: url('/images/gift_little_icon.png');
 }
 
 .main-container {
