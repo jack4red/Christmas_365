@@ -118,8 +118,8 @@ html,body {
 
 .main-container .prize-contianer {
 	width: 1150px;
-	min-height: 400px;
-	margin: 10px auto 380px auto;
+	min-height: 620px;
+	margin: 10px auto 160px auto;
 }
 
 .main-container .prize-contianer .prize-info-window {
@@ -157,8 +157,14 @@ html,body {
 	color:#fbe600;
 }
 
+.main-container .prize-contianer .prize-info-window .bottom-info{
+	background-image: url('/images/bottom-info.png');
+	width: 386px;
+	height: 103px;
+	position: absolute;
+	bottom: -107px;
+}
 .main-container .prize-contianer .prize-roll {
-	background: url('/images/snow_item_ground.png') no-repeat bottom;
 	position: relative;
     z-index: 2;
     margin-left: -150px;
@@ -166,6 +172,14 @@ html,body {
     float: left;
 	width: 606px;
 	height: 665px;
+}
+
+.main-container .prize-contianer .prize-roll .prize-roll-snow{
+	position: absolute;
+	background: url('/images/snow_item_ground.png');
+	bottom: -13px;
+	width: 100%;
+	height: 66px;
 }
 
 .main-container .activity-details-contianer {
@@ -246,7 +260,7 @@ html,body {
 	margin-bottom: 10px;
 }
 
-footer {
+.footer {
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
