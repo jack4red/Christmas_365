@@ -1,15 +1,49 @@
 html,body{
 	background-color: #c1192d;
-	background-image: url('/images/snow_background.png');
+	position: relative;
+	/*background-image: url('/images/snow_background.png');*/
+	min-width: 1500px;
+}
+
+.header {
+	position: relative;
+	background-image: url('/images/header_background.png');
+	width: 100%;
+	height: 595px;
+}
+
+.header .top-star {
+	background-image: url('/images/star.png');
+	width: 1450px;
+	height: 148px;
+	margin: 0 auto;
+}
+
+.header .complex-snow-ground {
+	background-image: url('/images/complex_snow_ground.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+	position: absolute;
+	bottom: -200px;
+	width: 100%;
+	height: 465px;
+}
+
+.main-container {
+	background-color: #fec101;
+	width: 100%;
+	min-height: 200px;
+	padding-top: 200px;
 }
 
 
-
-
-
-
 footer {
+	position: absolute;
+	bottom: 0px;
 	width: 100%;
-	height: 205px;
-	background: url('/images/footer_cloud.png');
+	height: auto;
+	overflow: hidden;
+	background-repeat: no-repeat;
+    background-size: contain;
+	background-color: #fec101;
 }
