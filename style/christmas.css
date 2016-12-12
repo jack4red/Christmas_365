@@ -1,4 +1,4 @@
-html,body{
+html,body {
 	background-color: #c1192d;
 	position: relative;
 	/*background-image: url('/images/snow_background.png');*/
@@ -101,6 +101,7 @@ html,body{
 }
 
 .main-container {
+	display: inline-block;
 	background-color: #fec101;
 	width: 100%;
 	min-height: 200px;
@@ -108,12 +109,12 @@ html,body{
 }
 
 .main-container .prize-contianer {
-	width: 1000px;
+	width: 1150px;
 	min-height: 400px;
-	margin: 10px auto 0 auto;
+	margin: 10px auto 380px auto;
 }
 
-.main-container .prize-contianer .prize-info-window{
+.main-container .prize-contianer .prize-info-window {
 	position: relative;
 	background-color: #f64a43;
 	border-radius: 5px;
@@ -125,7 +126,7 @@ html,body{
 	padding: 70px 0 50px 25px;
 }
 
-.main-container .prize-contianer .prize-info-window .prize-info-title{
+.main-container .prize-contianer .prize-info-window .prize-info-title {
 	position: absolute;
 	left: 150px;
 	top: -88px;
@@ -144,14 +145,64 @@ html,body{
 	height: 60px;
 }
 
-.main-container .prize-contianer .prize-info-window table tr td:nth-child(2){
+.main-container .prize-contianer .prize-info-window table tr td:nth-child(2) {
 	color:#fbe600;
 }
 
-.main-container .prize-contianer .prize-roll{
-	margin-left: 600px;
-	width: 570px;
-	height: 605px;
+.main-container .prize-contianer .prize-roll {
+	background: url('/images/snow_item_ground.png') no-repeat bottom;
+	position: relative;
+    z-index: 2;
+    margin-left: -150px;
+    top: -50px;
+    float: left;
+	width: 606px;
+	height: 665px;
+}
+
+.main-container .activity-details-contianer {
+	position: relative;
+	width: 1150px;
+	min-height: 885px;
+	margin: 0 auto;
+}
+
+.main-container .activity-details-contianer .activity-details {
+	width: 983px;
+	height: 885px;
+	padding: 0 35px;
+	background-color: #f64a43;
+}
+
+.main-container .activity-details-contianer .activity-details .rough-border {
+    position: relative;
+    top: -10px;
+    left: -50px;
+	width: 1083px;
+	height: 33px;
+	background-image: url('/images/rough_border.png');
+	background-color: #f64a43;
+    border-radius: 20px;
+}
+
+.main-container .activity-details-contianer .activity-details .activity-details-title {
+	background-image: url('/images/activity-details-title.png');
+	width: 195px;
+	height: 46px;
+	margin: 12px auto 50px auto;
+}
+
+.main-container .activity-details-contianer .activity-details ul>li {
+	text-indent: 40px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: white;
+}
+
+.main-container .activity-details-contianer .activity-details .hr {
+	border-bottom: 1px dotted white;
+	width:100%;
+	margin: 42px 0 36px 0;
 }
 
 footer {
