@@ -1,4 +1,4 @@
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
 	html,body {
 		background-color: #c1192d;
 		position: relative;
@@ -14,7 +14,7 @@
 	}
 
 	body .header .complex-snow-ground {
-		background-image: url('../images/complex_snow_ground.png');
+		/*background-image: url('../images/complex_snow_ground.png');*/
 		background-repeat: no-repeat;
 	    background-size: contain;
 		position: absolute;
@@ -85,7 +85,7 @@ html,body {
 
 .header .complex-snow-ground {
 	background-image: url(../images/complex_snow_ground.png);
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: contain;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/complex_snow_ground.png', sizingMethod='scale');
     position: absolute;
