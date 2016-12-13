@@ -1,7 +1,62 @@
+@media screen and (min-width: 1600px) {
+	html,body {
+		background-color: #c1192d;
+		position: relative;
+		min-width: 1800px;
+		font-family: '微软雅黑';
+	}
+
+	body .header .top-star {
+		background-image: url('../images/star.png');
+		width: 1450px;
+		height: 148px;
+		margin: 0 auto;
+	}
+
+	body .header .complex-snow-ground {
+		background-image: url('../images/complex_snow_ground.png');
+		background-repeat: no-repeat;
+	    background-size: contain;
+		position: absolute;
+		bottom: -120px;
+		width: 100%;
+		height: 465px;
+	}
+
+	body .header .complex-snow-ground .hint-introductions {
+		width: 740px;
+		height: 70px;
+		margin: 255px auto 25px auto;
+		font-size: 20px;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	body .header .complex-snow-ground .hint-introductions strong {
+		/*font-weight: bolder;*/
+		font-size: 26px;
+		color: #c0192d;
+	}
+
+	body .header .complex-snow-ground .publish-button {
+		margin: 0 auto;
+		width: 205px;
+		height: 55px;
+		border-radius: 30px;
+		line-height: 55px;
+		border-bottom: 5px solid #ac1a09;
+		text-align: center;
+		cursor: pointer;
+		font-size: 22px;
+		color: white;
+		background-color: #f64a43;
+	}
+}
+
 html,body {
 	background-color: #c1192d;
 	position: relative;
-	min-width: 1800px;
+	min-width: 1200px;
 	font-family: '微软雅黑';
 }
 
@@ -23,28 +78,30 @@ html,body {
 
 .header .top-star {
 	background-image: url('../images/star.png');
-	width: 1450px;
+	max-width: 1450px;
 	height: 148px;
 	margin: 0 auto;
 }
 
 .header .complex-snow-ground {
-	background-image: url('../images/complex_snow_ground.png');
-	background-repeat: no-repeat;
+	background-image: url(../images/complex_snow_ground.png);
+    background-repeat: no-repeat;
     background-size: contain;
-	position: absolute;
-	bottom: -120px;
-	width: 100%;
-	height: 465px;
+    position: absolute;
+    bottom: -290px;
+    /*width: 1200px;*/
+    width: 100%;
+    height: 465px;
+    /*min-height: 300px;*/
 }
 
 .header .complex-snow-ground .hint-introductions {
-	width: 740px;
-	height: 70px;
-	margin: 255px auto 25px auto;
-	font-size: 20px;
-	text-align: center;
-	line-height: 40px;
+    width: 509px;
+    height: 70px;
+    margin: 145px auto 0px auto;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
 }
 
 .header .complex-snow-ground .hint-introductions:before {
@@ -59,23 +116,22 @@ html,body {
 }
 
 .header .complex-snow-ground .hint-introductions strong {
-	/*font-weight: bolder;*/
-	font-size: 26px;
+	font-size: 18px;
 	color: #c0192d;
 }
 
 .header .complex-snow-ground .publish-button {
-	margin: 0 auto;
-	width: 205px;
-	height: 55px;
-	border-radius: 30px;
-	line-height: 55px;
-	border-bottom: 5px solid #ac1a09;
-	text-align: center;
-	cursor: pointer;
-	font-size: 22px;
-	color: white;
-	background-color: #f64a43;
+    margin: 0 auto;
+    width: 155px;
+    height: 35px;
+    border-radius: 30px;
+    line-height: 35px;
+    border-bottom: 5px solid #ac1a09;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: #f64a43;
 }
 
 .header .gift-title {

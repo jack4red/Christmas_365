@@ -1,0 +1,27 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {padding: 0;margin: 0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block}
+body, button, input, select, textarea {font: 12px/1.5 tahoma, arial, \5b8b\4f53;*line-height:1.5}
+table {border-collapse: collapse;border-spacing: 0;font-size: inherit;font: 100%}
+caption, th {text-align: left}
+fieldset, img {border: none;vertical-align: middle}
+ul, ol, li {list-style: none}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal}
+ins {text-decoration: none}
+del {text-decoration: line-through}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none}
+input, button, textarea, select {font-family: inherit;font-size: inherit;font-weight: inherit;vertical-align: middle;*font-size:100%;-moz-outline: none;outline: none}
+:focus {outline: none}
+address, caption, cite, code, dfn, em, i, b, strong, th, var, optgroup {font-style: normal;font-weight: normal}
+small {font-size: 100%}
+hr {color: #D1D7DC;background-color: #D1D7DC;border: none;height: 1px}
+.left {float: left}
+.right {float: right}
+.show {display: block}
+.hide {display: none}
+.clear {clear: both}
+.clearfix:after {content: '\0020';display: block;height: 0;clear: both;visibility: hidden}
+.clearfix {zoom: 1}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+body {background-color: #FFF;}
