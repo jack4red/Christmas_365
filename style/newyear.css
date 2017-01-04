@@ -54,10 +54,42 @@ html,body {
 	text-indent: 2em;
 }
 
-.main-container .prize-contianer .prize-roll {
+.main-container .prize-contianer .prize-roll{
 	width: 487px;
 	height: 580px;
 	float: right;
 	position: relative;
 	top: -50px;
+}
+
+.main-container .prize-contianer .prize-info-window table{
+	width: 485px;
+	text-indent: 10px;
+	font-size: 18px;
+	margin: 35px 0 0 75px;
+}
+
+.main-container .prize-contianer .prize-info-window table tr{
+	border-bottom: 1px solid #d7000a;
+	height: 45px;
+}
+
+.main-container .prize-contianer .prize-info-window table tr td:nth-child(2){
+	color:#e92105;
+}
+
+.main-container .prize-contianer .prize-info-window .my-prize-button{
+	display: inline-block;
+	width: 195px;
+	height: 46px;
+	background-color: #ffe000;
+	border-top: 5px solid #edbb0c;
+	color: #da1515;
+	font-size: 21px;
+	text-align: center;
+	line-height: 46px;
+	font-weight: bolder;
+	text-decoration: none;
+	margin-left: 170px;
+	margin-top: 17px;
 }
