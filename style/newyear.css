@@ -39,3 +39,25 @@ html,body {
 	font-size: 34px;
 	font-weight: bolder;
 }
+
+.main-container .prize-contianer{
+	width: 1050px;
+	height: 700px;
+	margin: 0 auto;
+	background: url('../images/prize-contianer.png') no-repeat;
+}
+
+.main-container .prize-contianer .title{
+	font-size: 32px;
+	color: #fff6ae;
+	font-weight: bolder;
+	text-indent: 2em;
+}
+
+.main-container .prize-contianer .prize-roll {
+	width: 487px;
+	height: 580px;
+	float: right;
+	position: relative;
+	top: -50px;
+}
