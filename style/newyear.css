@@ -1,5 +1,41 @@
 html,body {
 	font-family: '微软雅黑';
-	background: url('./images/background.png') no-repeat #d7000a;
+	background: url('../images/background.png') no-repeat #d7000a ;
+	background-size: cover;
+	background-position: center top;
+	padding-bottom: 100px;
 }
 
+.header,.main-container{
+	margin: 0 auto;
+	min-width: 1300px;
+	width: 1369px;
+}
+
+.header .big-logo{
+
+}
+
+.header .activity-description{
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	width: 940px;
+	margin: 0 auto;
+	line-height: 60px;
+}
+
+.header .publish-immediately-button{
+	text-decoration: none;
+	display: block;
+	background-image: url('../images/publish-immediately.png');
+	background-repeat: no-repeat;
+	width: 292px;
+	height: 80px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+	line-height: 80px;
+	color: #c90023;
+	font-size: 34px;
+	font-weight: bolder;
+}
