@@ -1,7 +1,7 @@
 html{font-size:10px}
 @media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
-@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
-@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:376px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:639px){html{font-size:15px}}
 @media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
 @media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
 @media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
@@ -10,6 +10,7 @@ html{font-size:10px}
 html {
     /*font-size: 62.5%;*/
     height: 100%;
+    font-family: "微软雅黑","Microsoft YaHei","Hiragino Sans GB W3",Tahoma,Arial;
     /*10 ÷ 16 × 100% = 62.5%*/
 }
 
@@ -40,8 +41,8 @@ body {
 }
 
 .form .text-input {
-	font-size: 1rem;
-	height: 20%;
+	font-size: 1.2rem;
+	height: 23%;
 	border-radius: 50rem;
 	padding-left: 1.5rem;
 	border: none;
@@ -55,7 +56,7 @@ body {
 
 .form .container {
 	width: 77%;
-	height: 20%;
+	height: 23%;
 	margin: 0 auto 2rem auto;
 	display: block;
 }
@@ -109,7 +110,7 @@ body {
 
 .prize-num {
 	position: relative;
-	bottom: 15rem;
+	bottom: 14rem;
 	text-align: center;
 	color: #ec4d35;
 	font-weight: bolder;
@@ -118,7 +119,7 @@ body {
 
 .prize-type {
 	position: relative;
-	bottom: 13.3rem;
+	bottom: 12.3rem;
 	text-align: center;
 	color: #ec4d35;
 	font-weight: bolder;
@@ -127,7 +128,7 @@ body {
 
 .prize-print {
 	position: relative;
-	bottom: 8.3rem;
+	bottom: 7.5rem;
 	text-align: center;
 	color: #d97c00;
 	font-size: 1.1rem;
@@ -139,7 +140,7 @@ body {
 
 .contarct {
 	position: relative;
-	bottom: 5.9rem;
+	bottom: 4.9rem;
 	font-size: 1rem;
 	text-align: center;
 	color: white;
