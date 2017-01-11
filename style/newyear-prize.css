@@ -151,4 +151,9 @@ body {
 
 .share-and-search-buttons {
 	margin: 0 auto;
+	width: 80%;
+}
+
+.share-and-search-buttons img {
+	width: 48%;
 }
