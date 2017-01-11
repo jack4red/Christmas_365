@@ -1,0 +1,154 @@
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+
+html {
+    /*font-size: 62.5%;*/
+    height: 100%;
+    /*10 ÷ 16 × 100% = 62.5%*/
+}
+
+body {
+    /*font-size: 1.4rem;*/
+    /*1.4 × 10px = 14px */
+    background: url('../images/background.png') #d63a3d;
+    background-size: cover;
+    height: 100%;
+}
+
+.logo {
+	width: 14.9%;
+	height: 4.9%;
+	margin: 4.7% 0 0 3%;
+	display: block;
+}
+
+.title {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.form {
+	height: 30%;
+	width: 100%;
+}
+
+.form .text-input {
+	font-size: 1rem;
+	height: 20%;
+	border-radius: 50rem;
+	padding-left: 1.5rem;
+	border: none;
+}
+
+.form .phone {
+	width: 73%;
+	margin: 0 auto 2rem auto;
+	display: block;
+}
+
+.form .container {
+	width: 77%;
+	height: 20%;
+	margin: 0 auto 2rem auto;
+	display: block;
+}
+
+.form .container .verification {
+	height: 100%;
+	width: 51.6%;
+}
+
+.form .container .get-verification-button {
+	float: right;
+	height: 100%;
+	width: 40%;
+	background-color: #efefef;
+	padding-left: 0;
+}
+
+.form .submit-button {
+	display: block;
+	width: 77%;
+	margin: 0 auto;
+	background-size: cover;
+}
+
+.form .submit-button img {
+	width: 100%;
+}
+
+.actiity-time {
+	text-align: center;
+	color: #ddceaf;
+	font-size: 0.8rem;
+	line-height: 5rem;
+}
+
+.footer {
+	width: 100%;
+	display: block;
+	position: relative;
+	bottom: -6rem;
+}
+
+
+
+/*result.html css*/
+.prize {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.prize-num {
+	position: relative;
+	bottom: 15rem;
+	text-align: center;
+	color: #ec4d35;
+	font-weight: bolder;
+	font-size: 2rem;
+}
+
+.prize-type {
+	position: relative;
+	bottom: 13.3rem;
+	text-align: center;
+	color: #ec4d35;
+	font-weight: bolder;
+	font-size: 1.7rem;
+}
+
+.prize-print {
+	position: relative;
+	bottom: 8.3rem;
+	text-align: center;
+	color: #d97c00;
+	font-size: 1.1rem;
+}
+
+.prize-print span {
+	color: #ec4d35;
+}
+
+.contarct {
+	position: relative;
+	bottom: 5.9rem;
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+}
+
+.contarct span {
+	color: #f8b62b;
+}
+
+.share-and-search-buttons {
+	margin: 0 auto;
+}
