@@ -93,6 +93,14 @@ body {
 
 
 /*result.html css*/
+
+.result-log {
+	width: 14.9%;
+	height: 4.9%;
+	margin-left: 3%;
+	display: block;
+}
+
 .prize {
 	width: 100%;
 	display: block;
@@ -119,7 +127,7 @@ body {
 
 .prize-print {
 	position: relative;
-	bottom: 2.53rem;
+	bottom: 2.33rem;
 	text-align: center;
 	color: #d97c00;
 	font-size: 15px;
