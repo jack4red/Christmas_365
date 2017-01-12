@@ -109,8 +109,9 @@ body {
 }
 
 .prize-num {
+	height: 0;
 	position: relative;
-	bottom: 14rem;
+	bottom: 4rem;
 	text-align: center;
 	color: #ec4d35;
 	font-weight: bolder;
@@ -118,8 +119,9 @@ body {
 }
 
 .prize-type {
+	height: 0;
 	position: relative;
-	bottom: 12.3rem;
+	bottom: -0.7rem;
 	text-align: center;
 	color: #ec4d35;
 	font-weight: bolder;
@@ -127,8 +129,9 @@ body {
 }
 
 .prize-print {
+	height: 0;
 	position: relative;
-	bottom: 7.5rem;
+	bottom: -0.3rem;
 	text-align: center;
 	color: #d97c00;
 	font-size: 1.1rem;
@@ -139,8 +142,9 @@ body {
 }
 
 .contarct {
+	height: 5rem;
 	position: relative;
-	bottom: 4.9rem;
+	bottom: -1.1rem;
 	font-size: 1rem;
 	text-align: center;
 	color: white;
