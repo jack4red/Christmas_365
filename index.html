@@ -117,50 +117,68 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="./js/jquery.js"></script>
-<script type="text/javascript">
-	//中奖滚动记录 //add by wkj 2016-12-13
-$(function(){
-	var $this = $("#prizeLog");
-	var scrollTimer;
-	$this.hover(function(){
-		clearInterval(scrollTimer);
-	},function(){
-		scrollTimer = setInterval(function(){
-			scrollNews( $this );
-		}, 2000 );
-	}).trigger("mouseout");
-});
-function scrollNews(obj){
-	var $self = obj.find("tbody:first");
-	var lineHeight = $self.find("tr:first").height();
-	$self.animate({ "margin-top" : -lineHeight +"px" },600 , function(){
-		$self.css({"margin-top":"0px"}).find("tr:first").appendTo($self);
-	})
-	var len = $('#prizeLog .is_true').length;
-	//alert(len)
-	$self.find("tr:lt(6)").removeClass('log_hide')
-	$self.find("tr:gt(6)").addClass('log_hide')
-	$.ajax({
-		url:'/prize/ajax_getPrizedList',
-		data:{'len':len},
-		type:'post',
-		dataType:'json',
-		success:function(e){
-			if( e.result == 1 ){
-				$.each(e.data,function(k,v){
-					var html = '';
-					html += "<tr class='log_hide is_true' >";
-						html += "<td>"+v['passport_phone']+"</td>";
-								html += "<td>"+v['prize_name']+"</td>";
-								html += "<td>"+v['update_time']+"</td>";
-							html += "</tr>";
-					$("#prizeLog tbody").append(html)
-				})
+	<div id="qr-code-dialog" class="form-Cover" style="display: none;">
+		<div class="lialog-box">
+			<div class="close"></div>
+			<img src="./images/qr.png" width="200" height="200">
+			<div class="text" style="text-align:center;">分享活动信息即可参与抽奖哦~</div>
+		</div>
+	</div>
+	<div id="red-pocket-dialog" class="form-Cover" style="display: none;">
+		<div class="lialog-box">
+			<div class="outliner">
+				<div class="close"></div>
+				<div class="prize-text">555~ 虽然木有中奖，但程序猿给你一个 爱的抱抱~</div>
+				<a href="#" class="submit-button"><img src="./images/confirm-button.png"></a>
+			</div>
+		</div>
+	</div>
+	<div class="opacity-Cover" style="display: none;"></div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/loginDialog.js"></script>
+	<script type="text/javascript">
+		//中奖滚动记录 //add by wkj 2016-12-13
+	$(function(){
+		var $this = $("#prizeLog");
+		var scrollTimer;
+		$this.hover(function(){
+			clearInterval(scrollTimer);
+		},function(){
+			scrollTimer = setInterval(function(){
+				scrollNews( $this );
+			}, 2000 );
+		}).trigger("mouseout");
+	});
+	function scrollNews(obj){
+		var $self = obj.find("tbody:first");
+		var lineHeight = $self.find("tr:first").height();
+		$self.animate({ "margin-top" : -lineHeight +"px" },600 , function(){
+			$self.css({"margin-top":"0px"}).find("tr:first").appendTo($self);
+		})
+		var len = $('#prizeLog .is_true').length;
+		//alert(len)
+		$self.find("tr:lt(6)").removeClass('log_hide')
+		$self.find("tr:gt(6)").addClass('log_hide')
+		$.ajax({
+			url:'/prize/ajax_getPrizedList',
+			data:{'len':len},
+			type:'post',
+			dataType:'json',
+			success:function(e){
+				if( e.result == 1 ){
+					$.each(e.data,function(k,v){
+						var html = '';
+						html += "<tr class='log_hide is_true' >";
+							html += "<td>"+v['passport_phone']+"</td>";
+									html += "<td>"+v['prize_name']+"</td>";
+									html += "<td>"+v['update_time']+"</td>";
+								html += "</tr>";
+						$("#prizeLog tbody").append(html)
+					})
+				}
 			}
-		}
-	})
-}
-</script>
+		})
+	}
+	</script>
 </body>
 </html>

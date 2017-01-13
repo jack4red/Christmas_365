@@ -161,3 +161,91 @@ body {
 .main-container .activity-details-contianer .activity-details .specially-explained .specially-explained-text ul li strong{
 	font-weight: bolder;
 }
+
+
+
+/*dialog-css*/
+.opacity-Cover {
+    width: 100%;
+    height: 100%;
+    background: url(../images/2_2.png) rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.form-Cover {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 110;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+}
+
+#qr-code-dialog .lialog-box {
+	background-color: white;
+	border-radius: 10px;
+	position: relative;
+	width: 317px;
+	height: 297px;
+	padding-top: 20px;
+	margin: 15% auto;
+}
+
+.form-Cover .close {
+	cursor: pointer;
+	position: absolute;
+	right: -25px;
+	top: -25px;
+	background-image: url('../images/cancel.png');
+	width: 50px;
+	height: 50px;
+}
+
+#qr-code-dialog .lialog-box img {
+	display: block;
+	margin: 0 auto;
+}
+
+#red-pocket-dialog .outliner {
+	width: 465px;
+	height: 550px;
+	position: relative;
+	bottom: -60px;
+	left: 50px;
+	padding-top: 120px;
+}
+
+#red-pocket-dialog .lialog-box {
+	background: url('../images/red-packet.png') transparent no-repeat;
+	border-radius: 10px;
+	position: relative;
+	width: 620px;
+	height: 610px;
+	margin: 10% auto;
+}
+
+#red-pocket-dialog .prize-text {
+	margin: 0px auto 30px auto;
+	text-align: center;
+	width: 314px;
+	color:#fbe442;
+	font-size: 36px;
+}
+
+#red-pocket-dialog .submit-button {
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 140px;
+}
+
+#red-pocket-dialog .submit-button img {
+	display: block;
+	margin: 0 auto;
+}
