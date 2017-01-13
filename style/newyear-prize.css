@@ -38,8 +38,8 @@ body {
 }
 
 .logo {
-	width: 14.9%;
-	height: 4.9%;
+	width: 6rem;
+	/*height: 2.2rem;*/
 	margin: 4.7% 0 0 3%;
 	display: block;
 }
@@ -176,4 +176,5 @@ body {
 
 .share-and-search-buttons img {
 	width: 48%;
+	margin-bottom: 6rem;
 }
