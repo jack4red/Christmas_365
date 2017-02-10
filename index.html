@@ -5,17 +5,36 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 </head>
-<link rel="stylesheet" type="text/css" href="./style/biggifts.css">
 <link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./style/biggifts.css">
 <!--[if lt IE 9]>
     <style>
     	
     </style>
 <![endif]-->
 <body>
-	<h1>test</h1>
+	<button class="test1">test1</button>
+	<div class="template" id="test">
+		<h1>testttttttt</h1>
+	</div>
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<!-- <script type="text/javascript" src="./js/bootstrap.min.js"></script> -->
-	<script type="text/javascript" src="./js/layer/layer.js"></script>
+	<script type="text/javascript" src="./js/layer/layer.min.js"></script>
+	<script type="text/javascript">
+		$('.test1').click(function() {
+			var test = $('#test').html();
+			console.log(typeof test)
+			$.layer({
+		        type: 1,
+		        title: false, //不显示默认标题栏
+				area: ['auto', 'auto'],
+				border: [0], //去掉默认边框
+				// closeBtn: [0, false], //去掉默认关闭按钮
+		        // shade: [0], //不显示遮罩
+		        // area: ['600px', '360px'],
+		        page: {html: test}
+		    });
+		})
+	</script>
 </body>
 </html>
