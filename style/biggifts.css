@@ -1,0 +1,6 @@
+html,body {
+	font-family: "微软雅黑","Microsoft YaHei","Hiragino Sans GB W3",Tahoma,Arial;
+	/*background: url('../images/background.png') no-repeat #d7000a ;*/
+	background-size: cover;
+	background-position: center top;
+}
