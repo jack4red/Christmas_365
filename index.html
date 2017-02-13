@@ -7,19 +7,20 @@
 </head>
 <link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./style/biggifts.css">
+<style type="text/css">
+	.modal-dialog {
+		margin-top: 20%;
+	}
+</style>
 <!--[if lt IE 9]>
 	<script src="./js/html5shiv.min.js"></script>
 	<script src="./js/respond.min.js"></script>
 <![endif]-->
 <body>
-	<button class="test1">test1</button>
-	<div class="template" id="test">
-		<h1>testttttttt</h1>
-	</div>
 
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+	<button type="button" class="btn btn-primary test">test</button>
 
-	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 	  <div class="modal-dialog modal-sm" role="document">
 	    <div class="modal-content">
 	      ...
@@ -27,23 +28,49 @@
 	  </div>
 	</div>
 
+	<div class="modal fade bs-example-modal-sm testModal1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	    	<div class="form-group">
+	    		<form id="lingjiang">
+					<label>你的姓名： <input type="text" name="name" class="form-control"></label>
+					<label>你的电话： <input type="text" name="tel" class="form-control"></label>
+					<label>你的领奖地址： <input type="text" name="address" class="form-control"></label>
+					<button type="submit" class="btn btn-primary submittest">submit</button>
+	    		</form>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./js/layer/layer.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="./js/messages_zh.js"></script>
 	<script type="text/javascript">
-		$('.test1').click(function() {
-			var test = $('#test').html();
-			console.log(typeof test)
-			$.layer({
-		        type: 1,
-		        title: false, //不显示默认标题栏
-				area: ['auto', 'auto'],
-				border: [0], //去掉默认边框
-				// closeBtn: [0, false], //去掉默认关闭按钮
-		        // shade: [0], //不显示遮罩
-		        // area: ['600px', '360px'],
-		        page: {html: test}
-		    });
+		// 添加手机验证规则
+		jQuery.validator.addMethod("isTel", function(value, element) {   
+		    var tel = /^1[34578]\d{9}$/;
+		    return this.optional(element) || (tel.test(value));
+		}, "请正确填写您的手机号码");
+
+		$(document).ready(function() {
+			$('.test').click(function () {
+				$('.testModal1').modal('show')
+				$('.submittest').click(function () {
+					$('#lingjiang').validate({
+						submitHandler: function(form){
+							alert('test')
+						    $(form).ajaxSubmit();
+						},
+						rules:{
+							name:"required",
+							tel:"required isTel",
+							address:"required"
+						}
+					})
+				})
+			})
 		})
 	</script>
 </body>
