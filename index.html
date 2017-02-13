@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-</head>
-<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="./style/biggifts.css">
-<style type="text/css">
-	.modal-dialog {
-		margin-top: 20%;
-	}
-</style>
-<!--[if lt IE 9]>
-	<script src="./js/html5shiv.min.js"></script>
-	<script src="./js/respond.min.js"></script>
-<![endif]-->
-<body>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1"></head>
+	<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/biggifts.css">
+	<link rel="stylesheet" type="text/css" href="./style/jquery.dataTables.min.css">
+	<style type="text/css">.modal-dialog { margin-top: 20%; }</style>
+	<!--[if lt IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	<body>
+		<button type="button" class="btn btn-primary test1">test1</button>
+		<button type="button" class="btn btn-primary test2">test2</button>
+		<button type="button" class="btn btn-primary test3">test3</button>
+		<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">...</div></div>
+		</div>
+		<div class="modal fade bs-example-modal-sm testModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>奖品名称</th>
+								<th>领奖号码</th>
+								<th>领取时间</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade bs-example-modal-sm testModal3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<table class="table" id="myDataTable">
+						<thead>
+							<tr>
+								<th>手机号</th>
+								<th>油量</th>
+								<th>获取方式</th>
+								<th>获取时间</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<!-- <nav aria-label="Page navigation">
+						<ul class="pagination">
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span></a>
+							</li>
+							<li>
+								<a href="#">1</a></li>
+							<li>
+								<a href="#">2</a></li>
+							<li>
+								<a href="#">3</a></li>
+							<li>
+								<a href="#">4</a></li>
+							<li>
+								<a href="#">5</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span></a>
+							</li>
+						</ul>
+					</nav> -->
+				</div>
+			</div>
+		</div>
+		<div class="modal fade bs-example-modal-sm testModal1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="form-group">
+						<form id="lingjiang">
+							<label>你的姓名：
+								<input type="text" name="name" class="form-control"></label>
+							<label>你的电话：
+								<input type="text" name="tel" class="form-control"></label>
+							<label>你的领奖地址：
+								<input type="text" name="address" class="form-control"></label>
+							<button type="submit" class="btn btn-primary submittest">submit</button></form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="./js/messages_zh.js"></script>
+		<script type="text/javascript">// 添加手机验证规则
+			jQuery.validator.addMethod("isTel",
+			function(value, element) {
+				var tel = /^1[34578]\d{9}$/;
+				return this.optional(element) || (tel.test(value));
+			},
+			"请正确填写您的手机号码");
 
-	<button type="button" class="btn btn-primary test1">test1</button>
-	<button type="button" class="btn btn-primary test2">test2</button>
-
-	<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-	  <div class="modal-dialog modal-sm" role="document">
-	    <div class="modal-content">
-	      ...
-	    </div>
-	  </div>
-	</div>
-
-	<div class="modal fade bs-example-modal-sm testModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-	  <div class="modal-dialog modal-sm" role="document">
-	    <div class="modal-content">
-	      <table class="table">
-	      	<thead>
-	      		<th>奖品名称</th>
-	      		<th>领奖号码</th>
-	      		<th>领取时间</th>
-	      	</thead>
-	      	<tbody>
-	      		<tr>
-	      		</tr>
-	      	</tbody>
-	      </table>
-	    </div>
-	  </div>
-	</div>
-
-	<div class="modal fade bs-example-modal-sm testModal1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-	  <div class="modal-dialog modal-sm" role="document">
-	    <div class="modal-content">
-	    	<div class="form-group">
-	    		<form id="lingjiang">
-					<label>你的姓名： <input type="text" name="name" class="form-control"></label>
-					<label>你的电话： <input type="text" name="tel" class="form-control"></label>
-					<label>你的领奖地址： <input type="text" name="address" class="form-control"></label>
-					<button type="submit" class="btn btn-primary submittest">submit</button>
-	    		</form>
-	    	</div>
-	    </div>
-	  </div>
-	</div>
-
-	<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="./js/messages_zh.js"></script>
-	<script type="text/javascript">
-		// 添加手机验证规则
-		jQuery.validator.addMethod("isTel", function(value, element) {
-		    var tel = /^1[34578]\d{9}$/;
-		    return this.optional(element) || (tel.test(value));
-		}, "请正确填写您的手机号码");
-
-		$(document).ready(function() {
-			var myValidator = $('#lingjiang').validate({
-				submitHandler: function(form){
-					alert('test')
-				    // $(form).ajaxSubmit();
-				},
-				rules:{
-					name:"required",
-					tel:"required isTel",
-					// address:"required"
-				}
-			})
-
-			$('.test1').click(function () {
-				myValidator.resetForm();
-				myValidator.currentForm.reset();
-				$('.testModal1').modal({backdrop: 'static', keyboard: false});
-			})
-
-			$('.test2').click(function () {
-				$.ajax({
-					url:'data/prize.json',
-					type:'GET',
-					success:function(data) {
-						var dataString = data['data'].reduce(function(before,after) {
-							return before + '<td>' + after + '</td>';
-						},'')
-						$('.testModal2').find('tbody tr').html(dataString)
-						$('.testModal2').modal({backdrop: 'static', keyboard: false});
+			$(document).ready(function() {
+				// 表单验证
+				var myValidator = $('#lingjiang').validate({
+					submitHandler: function(form) {
+						alert('test')
+						// $(form).ajaxSubmit();
+					},
+					rules: {
+						name: "required",
+						tel: "required isTel",
+						// address:"required"
 					}
 				})
+
+				$('.test1').click(function() {
+					myValidator.resetForm();
+					myValidator.currentForm.reset();
+					$('.testModal1').modal({
+						backdrop: 'static',
+						keyboard: false
+					});
+				})
+
+				$('.test2').click(function() {
+					$.ajax({
+						url: 'data/prize.json',
+						type: 'GET',
+						success: function(data) {
+							var dataString = data['data'].reduce(function(before, after) {
+								return before + '<td>' + after + '</td>';
+							},'');
+							$('.testModal2').find('tbody tr').html(dataString);
+							$('.testModal2').modal({
+								backdrop: 'static',
+								keyboard: false
+							});
+						}
+					})
+				})
 			})
-		})
-	</script>
-</body>
+
+			$('.test3').click(function() {
+				$('#myDataTable').DataTable( {
+					"info": false,
+					"ordering": false,
+					"lengthChange": false,
+					// "paging": false,
+					"searching": false,
+					"pageLength": 4,
+					"pagingType": "numbers",
+					"ajax": "data/help.json",
+					"columns": [
+						{ "data": "tel" },
+						{ "data": "num" },
+						{ "data": "method" },
+						{ "data": "time" }
+					]
+				});
+				$('.testModal3').modal({
+					backdrop: 'static',
+					keyboard: false
+				});
+			})
+		</script>
+	</body>
+
 </html>
