@@ -18,12 +18,31 @@
 <![endif]-->
 <body>
 
-	<button type="button" class="btn btn-primary test">test</button>
+	<button type="button" class="btn btn-primary test1">test1</button>
+	<button type="button" class="btn btn-primary test2">test2</button>
 
 	<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 	  <div class="modal-dialog modal-sm" role="document">
 	    <div class="modal-content">
 	      ...
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-sm testModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <table class="table">
+	      	<thead>
+	      		<th>奖品名称</th>
+	      		<th>领奖号码</th>
+	      		<th>领取时间</th>
+	      	</thead>
+	      	<tbody>
+	      		<tr>
+	      		</tr>
+	      	</tbody>
+	      </table>
 	    </div>
 	  </div>
 	</div>
@@ -43,19 +62,19 @@
 	  </div>
 	</div>
 
-	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="./js/messages_zh.js"></script>
 	<script type="text/javascript">
 		// 添加手机验证规则
-		jQuery.validator.addMethod("isTel", function(value, element) {   
+		jQuery.validator.addMethod("isTel", function(value, element) {
 		    var tel = /^1[34578]\d{9}$/;
 		    return this.optional(element) || (tel.test(value));
 		}, "请正确填写您的手机号码");
 
 		$(document).ready(function() {
-			var validator = $('#lingjiang').validate({
+			var myValidator = $('#lingjiang').validate({
 				submitHandler: function(form){
 					alert('test')
 				    // $(form).ajaxSubmit();
@@ -67,11 +86,25 @@
 				}
 			})
 
-			$('.test').click(function () {
-				$('#lingjiang')[0].reset();
-				$('.testModal1').modal('show');
+			$('.test1').click(function () {
+				myValidator.resetForm();
+				myValidator.currentForm.reset();
+				$('.testModal1').modal({backdrop: 'static', keyboard: false});
 			})
 
+			$('.test2').click(function () {
+				$.ajax({
+					url:'data/prize.json',
+					type:'GET',
+					success:function(data) {
+						var dataString = data['data'].reduce(function(before,after) {
+							return before + '<td>' + after + '</td>';
+						},'')
+						$('.testModal2').find('tbody tr').html(dataString)
+						$('.testModal2').modal({backdrop: 'static', keyboard: false});
+					}
+				})
+			})
 		})
 	</script>
 </body>
