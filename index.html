@@ -55,22 +55,23 @@
 		}, "请正确填写您的手机号码");
 
 		$(document).ready(function() {
-			$('.test').click(function () {
-				$('.testModal1').modal('show')
-				$('.submittest').click(function () {
-					$('#lingjiang').validate({
-						submitHandler: function(form){
-							alert('test')
-						    $(form).ajaxSubmit();
-						},
-						rules:{
-							name:"required",
-							tel:"required isTel",
-							address:"required"
-						}
-					})
-				})
+			var validator = $('#lingjiang').validate({
+				submitHandler: function(form){
+					alert('test')
+				    // $(form).ajaxSubmit();
+				},
+				rules:{
+					name:"required",
+					tel:"required isTel",
+					// address:"required"
+				}
 			})
+
+			$('.test').click(function () {
+				$('#lingjiang')[0].reset();
+				$('.testModal1').modal('show');
+			})
+
 		})
 	</script>
 </body>
