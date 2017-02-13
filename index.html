@@ -13,9 +13,10 @@
 		<script src="./js/respond.min.js"></script>
 	<![endif]-->
 	<body>
-		<button type="button" class="btn btn-primary test1">test1</button>
-		<button type="button" class="btn btn-primary test2">test2</button>
-		<button type="button" class="btn btn-primary test3">test3</button>
+
+
+
+		<!-- 模态框 -->
 		<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">...</div></div>
@@ -125,30 +126,31 @@
 						}
 					})
 				})
+				
+				$('.test3').click(function() {
+					$('#myDataTable').DataTable( {
+						"info": false,
+						"ordering": false,
+						"lengthChange": false,
+						// "paging": false,
+						"searching": false,
+						"pageLength": 4,
+						"pagingType": "numbers",
+						"ajax": "data/help.json",
+						"columns": [
+							{ "data": "tel" },
+							{ "data": "num" },
+							{ "data": "method" },
+							{ "data": "time" }
+						]
+					});
+					$('.testModal3').modal({
+						backdrop: 'static',
+						keyboard: false
+					});
+				})
 			})
 
-			$('.test3').click(function() {
-				$('#myDataTable').DataTable( {
-					"info": false,
-					"ordering": false,
-					"lengthChange": false,
-					// "paging": false,
-					"searching": false,
-					"pageLength": 4,
-					"pagingType": "numbers",
-					"ajax": "data/help.json",
-					"columns": [
-						{ "data": "tel" },
-						{ "data": "num" },
-						{ "data": "method" },
-						{ "data": "time" }
-					]
-				});
-				$('.testModal3').modal({
-					backdrop: 'static',
-					keyboard: false
-				});
-			})
 		</script>
 	</body>
 
