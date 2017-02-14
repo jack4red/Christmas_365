@@ -16,12 +16,60 @@
 		<div class="main-container">
 			<div class="login">欢迎 137****3366！[退出]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			<div class="main-item">
-				<div class="header">123</div>
-				<div class="item-container">123</div>
+				<div class="header">已参加人数：88888</div>
+				<div class="item-container index-1">
+					<div class="title">当前累计加油75点 
+						<div class="items">
+							<span class="cursor refresh">[刷新]</span>
+							<span class="cursor prize-log">[领奖记录]</span>
+							<span class="cursor oil-log">[油量获取记录]</span>
+						</div>
+					</div>
+					<span class="content-description">*每位房东发布房源只有一次参与机会，多发房源不累计油量（发布房源油量初设值为10点）但容易获得“人气房东”称号，有机会领取<span>5000</span>元装修基金哦！<br> *所领奖品将在3月20日统一发放</span>
+					<div class="oil-item">
+						<div class="capsule"></div>
+						<div class="capsule-content" style="width: 0px">
+							<div class="capsule-index">当前油量<span>0</span>点</div>
+						</div>
+					</div>
+					<div class="buttons">
+						<button class="get-prize">立即领奖</button>
+						<button class="friends-help" style="float: right;">呼朋唤友帮我加油</button>
+					</div>
+				</div>
 			</div>
 			<div class="main-item">
-				<div class="header">123</div>
-				<div class="item-container">123</div>
+				<div class="header">达到相应油量即可领取</div>
+				<div class="item-container index-2">
+					<div class="big-prize-right"></div>
+					<div class="small-prize-left">
+						<div class="prize-item" style="margin-right: 30px">
+							<img src="./images/liuliang.png">
+							<div class="name">30M-1G流量随机送</div>
+							<div class="num">剩余<span>1000</span>份</div>
+							<button>20油量</button>
+						</div>
+						<div class="prize-item">
+							<img src="./images/huafei.png">
+							<div class="name">20-50元话费随机送</div>
+							<div class="num">剩余<span>1000</span>份</div>
+							<button>60油量</button>
+						</div>
+						<div class="prize-item" style="margin-right: 30px">
+							<img src="./images/jiashiqi.png">
+							<div class="name">高定加湿器一台</div>
+							<div class="num">剩余<span>1000</span>份</div>
+							<button>140油量</button>
+						</div>
+						<div class="prize-item">
+							<img src="./images/money.png">
+							<div class="name">jiangping</div>
+							<div class="num">剩余<span>1000</span>份</div>
+							<button>200油量</button>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
 			</div>
 			<div class="main-item">
 				<div class="header">123</div>
@@ -109,6 +157,26 @@
 				return this.optional(element) || (tel.test(value));
 			},
 			"请正确填写您的手机号码");
+
+			function setOilItem(num) { //设置油量
+				var widthNum;
+				if (num<=20) {
+					widthNum = num*2.5;
+				} else if(num<=60) {
+					widthNum = (num - 20)*3.75 + 50;
+				} else if(num<=140) {
+					widthNum = (num - 60)*1.88 + 200;
+				} else if(num<=200) {
+					widthNum = (num - 140)*4.15 + 350;
+				} else if(num<=5000) {
+					widthNum = (num - 200)*0.042 + 599;
+				} else {
+					widthNum = (num - 5000)*0.001 + 800;
+					widthNum = Math.min(860,widthNum);
+				}
+				$('.capsule-content').css('width',widthNum);
+				$('.capsule-index span').html(num);
+			}
 
 			$(document).ready(function() {
 				// 表单验证

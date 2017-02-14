@@ -13,6 +13,10 @@ body {
 	display: none;
 }
 
+.cursor {
+	cursor: pointer;
+}
+
 .main-container {
 	width: 1130px;
 	margin: 0 auto;
@@ -38,7 +42,7 @@ body {
 	font-weight: bolder;
 	color: #fff100;
 	text-align: center;
-	line-height: 100px;
+	line-height: 135px;
 }
 
 .main-container .main-item .item-container {
@@ -48,6 +52,142 @@ body {
 	padding: 43px 35px;
 	background-color: white;
 }
+
+
+
+
+.main-container .main-item .index-1 {
+	color: #ca2a20;
+}
+
+.main-container .main-item .index-1 .title {
+	font-size: 30px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	display: table;
+}
+
+.main-container .main-item .index-1 .title .items {
+	position: absolute;
+	right: -220px;
+	bottom: 5px;
+	color: #c97e79;
+	font-size: 14px;
+}
+
+.main-container .main-item .index-1 .content-description {
+	width: 840px;
+	color: #c95951;
+	font-size: 12px;
+}
+
+.main-container .main-item .index-1 .content-description span {
+	color: #ff0f00;
+	font-size: 18px;
+}
+
+.main-container .main-item .index-1 .oil-item {
+	position: relative;
+	width: 872px;
+	height: 146px;
+	margin: 40px 0 50px 0;
+}
+
+.main-container .main-item .index-1 .oil-item .capsule {
+	z-index: 2;
+	position: absolute;
+	bottom: 0px;
+	width: 872px;
+	height: 111px;
+	background: url('../images/capsule.png');
+}
+
+.main-container .main-item .index-1 .oil-item .capsule-content {
+	z-index: 3;
+	background: url('../images/capsule-content.png') repeat-x;
+	height: 68px;
+	position: absolute;
+	bottom: 43px;
+}
+
+.main-container .main-item .index-1 .oil-item .capsule-index {
+	z-index: 2;
+	position: absolute;
+	right: -85px;
+	top: -35px;
+	width: 170px;
+	height: 40px;
+	background: url('../images/tringle.png') no-repeat center bottom;
+	text-align: center;
+	font-size: 18px;
+}
+
+.main-container .main-item .index-1 .buttons {
+	width: 430px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.main-container .main-item .index-1 .buttons button {
+	width: 200px;
+	height: 48px;
+	background-color: #ca2a20;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	line-height: 48px;
+	font-size: 18px;
+	font-weight: bolder;
+	border: none;
+}
+
+.main-container .main-item .index-2 .big-prize-right {
+	float: right;
+	width: 400px;
+	height: 614px;
+	background: url('../images/zhuangxiu.png') no-repeat;
+}
+
+.main-container .main-item .index-2 .small-prize-left {
+	width: 490px;
+	height: 615px;
+}
+
+.main-container .main-item .index-2 .small-prize-left .prize-item {
+	width: 230px;
+	height: 290px;
+	float: left;
+	margin-bottom: 30px;
+}
+
+.main-container .main-item .index-2 .small-prize-left .prize-item .name {
+	margin-top: 18px;
+	text-align: center;
+	font-size: 18px;
+	color: #d11e25;
+}
+.main-container .main-item .index-2 .small-prize-left .prize-item .num {
+	margin-bottom: 13px;
+	text-align: center;
+	font-size: 14px;
+	color: #f19e93;
+}
+
+.main-container .main-item .index-2 .small-prize-left .prize-item button {
+	width: 100%;
+	height: 36px;
+	border-radius: 5px;
+	background-color: #ff6c00;
+	text-align: center;
+	line-height: 36px;
+	color: white;
+	font-size: 18px;
+	border: none;
+}
+
+
+
 
 .footer {
 	height: 120px;
