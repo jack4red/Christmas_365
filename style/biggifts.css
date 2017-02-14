@@ -45,6 +45,18 @@ body {
 	line-height: 135px;
 }
 
+.main-container .main-item .header.re-title {
+	padding-top: 50px;
+}
+.main-container .main-item .header.re-title .big-title {
+	line-height: 0px;
+}
+
+.main-container .main-item .header.re-title .small-title {
+	line-height: 70px;
+	font-size: 16px;
+}
+
 .main-container .main-item .item-container {
 	width: 1000px;
 	border: 6px solid #e36859;
@@ -91,7 +103,7 @@ body {
 	position: relative;
 	width: 872px;
 	height: 146px;
-	margin: 40px 0 50px 0;
+	margin: 40px auto 50px auto;
 }
 
 .main-container .main-item .index-1 .oil-item .capsule {
@@ -147,7 +159,23 @@ body {
 	width: 400px;
 	height: 614px;
 	background: url('../images/zhuangxiu.png') no-repeat;
+	padding: 20px;
+	color: white;
 }
+
+.main-container .main-item .index-2 .big-prize-right .title {
+	font-size: 18px;
+}
+
+.main-container .main-item .index-2 .big-prize-right .num {
+	font-size: 14px;
+}
+
+.main-container .main-item .index-2 .big-prize-right .num span {
+	font-size: 24px;
+	color: #fff100;
+}
+
 
 .main-container .main-item .index-2 .small-prize-left {
 	width: 490px;
@@ -174,6 +202,10 @@ body {
 	color: #f19e93;
 }
 
+.main-container .main-item .index-2 .small-prize-left .prize-item .num span {
+	color: #ff0f00;
+}
+
 .main-container .main-item .index-2 .small-prize-left .prize-item button {
 	width: 100%;
 	height: 36px;
@@ -185,6 +217,59 @@ body {
 	font-size: 18px;
 	border: none;
 }
+
+.main-container .main-item .index-3 .two-item {
+	padding: 30px 0 15px 30px;
+	color: white;
+	width: 440px;
+	height: 220px;
+}
+
+.main-container .main-item .index-3 .two-item .title {
+	font-size: 30px;
+}
+
+.main-container .main-item .index-3 .two-item .description {
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 10px;
+}
+
+.main-container .main-item .index-3 .two-item button {
+	width: 168px;
+	height: 44px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 44px;
+	border: none;
+}
+
+.main-container .main-item .index-3 .friends-help {
+	float: right;
+	background: url('../images/friend-help.png') no-repeat;
+}
+
+.main-container .main-item .index-3 .public-house {
+	background: url('../images/getjiayou-item.png') no-repeat;
+}
+
+.main-container .main-item .index-3 ul {
+	margin-top: 30px;
+}
+.main-container .main-item .index-3 ul li {
+	list-style-image: url('../images/little-item.png');
+	line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
