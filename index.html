@@ -192,11 +192,23 @@
 					</div>
 				</div></div>
 		</div>
-		<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal fade bs-example-modal-sm no-chance1-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
-				<div class="modal-content">...</div></div>
+				<div class="modal-content">
+					<div class="title">您还未达到最低的领奖资格</div>
+					<div class="description">赶快邀请朋友为你加油吧，每个朋友可为您加5点油量哦~</div>
+					<button>呼朋唤友帮我加油</button>
+				</div></div>
 		</div>
-		<div class="modal fade bs-example-modal-sm testModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal fade bs-example-modal-sm no-chance2-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="title">您未发布房源</div>
+					<div class="description">现在赶快发布房源，就可以邀请好友为你加油啦 100000好礼等你来分瓜哦！100%中奖</div>
+					<button>呼朋唤友帮我加油</button>
+				</div></div>
+		</div>
+		<div class="modal fade bs-example-modal-sm result-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">
 					<table class="table">
@@ -214,10 +226,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade bs-example-modal-sm testModal3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal fade bs-example-modal-sm friends-help-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">
-					<table class="table" id="myDataTable">
+					<table class="table" id="myDataTable" width="598px">
 						<thead>
 							<tr>
 								<th>手机号</th>
@@ -232,18 +244,21 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade bs-example-modal-sm testModal1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal fade bs-example-modal-sm form-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">
+					<div class="title">领奖信息</div>
 					<div class="form-group">
 						<form id="lingjiang">
-							<label>你的姓名：
+							<label>您的姓名：
 								<input type="text" name="name" class="form-control"></label>
-							<label>你的电话：
+							<label>您的电话：
 								<input type="text" name="tel" class="form-control"></label>
-							<label>你的领奖地址：
+							<label>领奖地址：
 								<input type="text" name="address" class="form-control"></label>
-							<button type="submit" class="btn btn-primary submittest">submit</button></form>
+							<div class="tip">*请务必保证填写信息真实有效，获得实物奖品地址必填。</div>
+							<button type="submit" class="submittest">提交</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -309,11 +324,8 @@
 					}
 				})
 
-				$('.mybbbbtest').click(function(argument) {
-					showPrize('20-50元话费随机送')
-				})
-
-				$('.test1').click(function() {
+				// 用来出表单对话框
+				$('.tttt').click(function() {
 					myValidator.resetForm();
 					myValidator.currentForm.reset();
 					$('.testModal1').modal({
@@ -322,7 +334,12 @@
 					});
 				})
 
-				$('.test2').click(function() {
+				// $('.mybbbbtest').click(function(argument) {
+				// 	$('.result-Modal').modal('show')
+				// })
+
+				// 获取获奖信息
+				$('.tttttt').click(function() {
 					$.ajax({
 						url: 'data/prize.json',
 						type: 'GET',
@@ -331,23 +348,20 @@
 							for (var i = 0; i < data['data'].length; i++) {
 								dataString = dataString + '<td>' + data['data'][i] + '</td>';
 							}
-							$('.testModal2').find('tbody tr').html(dataString);
-							$('.testModal2').modal({
-								backdrop: 'static',
-								keyboard: false
-							});
+							$('.result-Modal').find('tbody tr').html(dataString);
+							$('.result-Modal').modal('show');
 						}
 					})
 				})
 				
-				$('.test3').click(function() {
+				$('.tttt').click(function() {
 					$('#myDataTable').DataTable( {
 						"info": false,
 						"ordering": false,
 						"lengthChange": false,
 						// "paging": false,
 						"searching": false,
-						"pageLength": 4,
+						"pageLength": 3,
 						"pagingType": "numbers",
 						"ajax": "data/help.json",
 						"columns": [
@@ -357,10 +371,7 @@
 							{ "data": "time" }
 						]
 					});
-					$('.testModal3').modal({
-						backdrop: 'static',
-						keyboard: false
-					});
+					$('.friends-help-Modal').modal('show');
 				})
 			})
 

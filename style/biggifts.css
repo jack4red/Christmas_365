@@ -341,3 +341,131 @@ body {
 	font-size: 18px;
 	line-height: 50px;
 }
+
+.no-chance1-Modal .title,.no-chance2-Modal .title {
+	margin-top: 90px;
+	color: #e10e01;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+
+.no-chance1-Modal .description,.no-chance2-Modal .description {
+	width: 353px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #666666;
+	margin-bottom: 20px;
+}
+
+.no-chance1-Modal button,.no-chance2-Modal button {
+	width: 205px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background-color: #ca2a20;
+	font-size: 18px;
+	line-height: 50px;
+	margin: 0 auto;
+	display: block;
+}
+
+
+.form-Modal .title {
+	margin-top: 40px;
+	color: #e10e01;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+
+.form-Modal form {
+	margin: 0 auto;
+	width: 380px;
+	height: 265px;
+}
+.form-Modal label {
+	display: block;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #666666;
+	margin-top: 20px;
+}
+
+.form-Modal label input {
+	display: inline-block;
+	width: 300px;
+	height: 40px;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	/*line-height: 40px;*/
+	/*font-size: 18px;
+	color: black;*/
+}
+
+.form-Modal .error,.form-Modal .tip {
+	margin-top: 0px;
+	color: #e50000;
+	font-size: 12px;
+}
+
+.form-Modal label.error {
+	height: 0;
+	text-indent: 6em;
+}
+
+.form-Modal button {
+	width: 205px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background-color: #ca2a20;
+	font-size: 18px;
+	line-height: 50px;
+	margin: 20px auto 0 auto;
+	display: block;
+}
+
+.result-Modal .table tr,.friends-help-Modal .table tr {
+	height: 60px;
+}
+
+.result-Modal .table tr th,.friends-help-Modal .table tr th {
+	text-align: center;
+	line-height: 60px;
+	background-color: #d9d9d9;
+}
+
+.result-Modal .table tr th {
+	width: 200px;
+}
+
+.result-Modal .table tr td,.friends-help-Modal .table tr td {
+	text-align: center;
+	line-height: 60px;
+}
+
+.friends-help-Modal .table tr th {
+	width: 150px;
+}
+
+.friends-help-Modal .modal-content div.dataTables_paginate.paging_numbers {
+	margin-top: 10px;
+}
+
+.friends-help-Modal .modal-content div.dataTables_paginate.paging_numbers .paginate_button {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	line-height: 25px;
+	text-align: center;
+	display: inline;
+	border: 1px solid #666;
+	background-color: white;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	margin-right: 10px;
+}

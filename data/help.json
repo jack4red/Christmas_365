@@ -14,13 +14,13 @@
     },
     {
       "tel": "Ashton Cox",
-      "num": "Junior Technical Author",
+      "num": "Junior Technical",
       "method": "$86,000",
       "time": "2009/01/12"
     },
     {
       "tel": "Cedric Kelly",
-      "num": "Senior Javascript Developer",
+      "num": "Senior Javascript",
       "method": "$433,060",
       "time": "2012/03/29"
     },
@@ -32,7 +32,7 @@
     },
     {
       "tel": "Brielle Williamson",
-      "num": "Integration Specialist",
+      "num": "Integration",
       "method": "$372,000",
       "time": "2012/12/02"
     },
@@ -44,13 +44,13 @@
     },
     {
       "tel": "Rhona Davidson",
-      "num": "Integration Specialist",
+      "num": "Integration",
       "method": "$327,900",
       "time": "2010/10/14"
     },
     {
       "tel": "Colleen Hurst",
-      "num": "Javascript Developer",
+      "num": "Javascript",
       "method": "$205,500",
       "time": "2009/09/15"
     }
