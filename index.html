@@ -7,7 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="./style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./style/biggifts.css">
 	<link rel="stylesheet" type="text/css" href="./style/jquery.dataTables.min.css">
-	<style type="text/css">.modal-dialog { margin-top: 20%; }</style>
+	<style type="text/css">
+		.modal-dialog {
+			margin-top: 10%;
+			width: 600px;
+			height: 388px;
+		}
+		.modal-dialog .modal-content {
+			height: 388px;
+		}
+	</style>
 	<!--[if lt IE 9]>
 		<script src="./js/html5shiv.min.js"></script>
 		<script src="./js/respond.min.js"></script>
@@ -127,8 +136,62 @@
 			</div>
 		</div>
 
+		<!-- 测试按钮 -->
+		<button class="mybbbbtest">mybbbbtest</button>
+
 
 		<!-- 模态框 -->
+		<div class="modal fade bs-example-modal-sm success-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<img src="./images/success.png">
+				</div></div>
+		</div>
+		<div class="modal fade bs-example-modal-sm fail-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<img src="./images/fail.png">
+				</div></div>
+		</div>
+		<div class="modal fade bs-example-modal-sm invite-friends-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="content">赶快邀请朋友为你加油吧，每个朋友可为您加5点油量</div>
+					<!-- JiaThis Button BEGIN -->
+					<div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_tqq"></a>
+						<a class="jiathis_button_qzone"></a>
+						<a class="jiathis_button_douban"></a>
+						<a class="jiathis_button_renren"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+						<a class="jiathis_counter_style"></a>
+						</div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							summary:"",
+							shortUrl:false,
+							hideMore:false
+						}
+						</script>
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+					<!-- JiaThis Button END -->
+
+				</div></div>
+		</div>
+		<div class="modal fade bs-example-modal-sm prize-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="title">恭喜你</div>
+					<div class="second-title">当前领取：<span>200yuan</span></div>
+					<div class="description">每个用户只能领取1次奖品哦，油量越多奖品价值越高哦~ 3月20日前赶快邀请朋友为你加油吧，是否确认领奖？</div>
+					<div class="buttons">
+						<button style="float: right;">呼朋唤友帮我加油</button>
+						<button>立即领奖</button>
+					</div>
+				</div></div>
+		</div>
 		<div class="modal fade bs-example-modal-sm testModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">...</div></div>
@@ -218,6 +281,20 @@
 				$('.capsule-index span').html(num);
 			}
 
+			// 显示领取成功或者失败的方法
+			function showResultModal(result) {
+				if (result === 'success') {
+					$('.success-modal').modal('show')
+				} else {
+					$('.fail-modal').modal('show')
+				}
+			}
+
+			function showPrize(text) {
+				$('.prize-Modal').find('.second-title span').html(text)
+				$('.prize-Modal').modal('show')
+			}
+
 			$(document).ready(function() {
 				// 表单验证
 				var myValidator = $('#lingjiang').validate({
@@ -230,6 +307,10 @@
 						tel: "required isTel",
 						// address:"required"
 					}
+				})
+
+				$('.mybbbbtest').click(function(argument) {
+					showPrize('20-50元话费随机送')
 				})
 
 				$('.test1').click(function() {

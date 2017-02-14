@@ -263,17 +263,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .footer {
 	height: 120px;
 	width:100%;
@@ -289,4 +278,66 @@ body {
 
 .footer .content img {
 	float: right;
+}
+
+
+
+/*modal模态框css*/
+.invite-friends-Modal .modal-content {
+	background: url('../images/add-oil-modal.png') no-repeat white;
+}
+
+.invite-friends-Modal .modal-content .content {
+	text-align: center;
+	font-size: 20px;
+	color: #e10e01;
+	margin-top: 210px;
+}
+
+.invite-friends-Modal .modal-content .jiathis_style {
+    margin: 30px auto;
+    display: table;
+    height: 30px;
+}
+
+
+.prize-Modal .title {
+	margin-top: 90px;
+	color: #e10e01;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+
+.prize-Modal .second-title {
+	font-size: 20px;
+	color: #e10e01;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.prize-Modal .description {
+	width: 353px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #666666;
+	margin-bottom: 20px;
+}
+
+.prize-Modal .buttons {
+	width: 430px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.prize-Modal .buttons button {
+	width: 205px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background-color: #ca2a20;
+	font-size: 18px;
+	line-height: 50px;
 }
