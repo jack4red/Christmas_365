@@ -1,10 +1,67 @@
 html,body {
 	font-family: "微软雅黑","Microsoft YaHei","Hiragino Sans GB W3",Tahoma,Arial;
+}
+
+body {
 	background: url('../images/background.png') no-repeat #ca2a20 ;
-	background-size: cover;
+	/*background-size: cover;*/
 	background-position: center top;
+	padding-bottom: 150px;
 }
 
 .template {
 	display: none;
+}
+
+.main-container {
+	width: 1130px;
+	margin: 0 auto;
+}
+
+.main-container .login {
+	color: white;
+	margin-top: 650px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.main-container .main-item {
+	width: 1128px;
+	margin: 0 auto;
+}
+
+.main-container .main-item .header {
+	width: 1128px;
+	height: 144px;
+	background: url('../images/head.png') no-repeat;
+	font-size: 29px;
+	font-weight: bolder;
+	color: #fff100;
+	text-align: center;
+	line-height: 100px;
+}
+
+.main-container .main-item .item-container {
+	width: 1000px;
+	border: 6px solid #e36859;
+	margin: 0 auto;
+	padding: 43px 35px;
+	background-color: white;
+}
+
+.footer {
+	height: 120px;
+	width:100%;
+	background: url('../images/footer.png') repeat-x;
+}
+
+.footer .content {
+	width: 1006px;
+	margin: 0 auto;
+	color: white;
+	padding: 30px 0;
+}
+
+.footer .content img {
+	float: right;
 }
