@@ -543,3 +543,356 @@ body {
 	box-shadow: 0 5px 15px rgba(0,0,0,.5);
 	margin-right: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+/*整合其他来源css*/
+.index-4 .l-content {
+	float: left;
+}
+.index-4 .l-content .l-list{
+    width: 370px;
+    height: 400px;
+    border: 1px solid #dddddd;
+    margin-right: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.index-4 .l-content .l-list .imgs_{
+    width: 370px;
+    height: 260px;
+    display: block;
+    position: relative;
+}
+
+.index-4 .l-content .l-list .imgs_ .mes_{
+    width: 350px;
+    height: 40px;
+    padding: 0 10px;
+    background: url("../images/1_1.png");
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    line-height: 40px;
+    color: #FFF;
+}
+
+.index-4 .l-content .l-list .mes_ .adress_{
+    font-size: 20px;
+    height: 40px;
+    /* margin-right: 20px; */
+    /* display: block; */
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.index-4 .l-content .l-list .mes_ .adr-name{
+    height: 40px;
+    margin-right: 20px;
+    /* display: block; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 120px;
+}
+
+.index-4 .l-content .l-list .mes_ .prices_{
+    width: auto;
+    height: 40px;
+    float: right;
+    line-height: 40px;
+}
+
+.index-4 .l-content .l-list .mes_ .prices_ span{
+    font-size: 24px;
+}
+
+
+.inner-Con{
+    /* width: 370px; */
+    /* height: 150px; */
+}
+
+.inner-Con h4{
+    /* width: 350px; */
+    /* height: 40px; */
+    /* line-height: 40px; */
+    font-weight: normal;
+    padding: 0 10px;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+.inner-Con h4 span{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inner-Con h4 .icon{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei';
+    margin-right: 3px;
+    /* margin-top: 10px; */
+    display: inline-block;
+}
+
+.inner-Con h4 .ora{
+    background: #ffa000;
+}
+
+.inner-Con h4 .hui{
+    background: rgb(236,108,0);
+}
+
+.inner-Con h4 .red{
+    background: #f67d7d;
+}
+
+.inner-Con h4 .gre{
+    background: #21cfbb;
+}
+
+.l-details_{
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    padding: 0 10px;
+}
+
+.l-details_ .icon, .l-details_ a{
+    color: #999;
+    position: relative;
+}
+
+.l-details_ a:hover, .l-details_ a:hover .icon{
+    color: #ec6c00;
+}
+
+.l-details_ a:hover .showAlls{
+    display: block;
+}
+
+.foot-c{
+    width: 1200px;
+}
+
+.inner-Con  .l-pos_{
+    /* width: 350px; */
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.inner-Con  .l-pos_ i{
+    display: block;
+    float: left;
+}
+
+.inner-Con  .l-pos_ span{
+    width: 280px;
+    height: 100%;
+    display: block;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+
+
+.index-4 .l-pos_ .icon{
+    color: #ec6c00;
+}
+
+.index-4 .inner-Con .tags{
+    width: 290px;
+    height: 36px;
+    padding: 7px 10px;
+    background: #f7f7f7;
+}
+
+
+.index-4 .inner-Con .tags li{
+    list-style: none;
+    width: auto;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ee9f5b;
+    float: left;
+    color: #ee9f5b;
+    margin-right: 10px;
+}
+
+
+
+.index-4 .inner-Con .tags li.blue{
+    border-color: #2bb1fe;
+    color: #2bb1fe;
+}
+
+.index-4 .inner-Con .tags li.green{
+    border-color: #6cb615;
+    color: #6cb615;    
+}
+
+.index-4 .inner-Con .tags li.red{
+    border-color: #f67d7d;
+    color: #f67d7d;    
+}
+
+.index-4 .icon.star_{
+    position: absolute;
+    font-size: 40px;
+    color: #999;
+    opacity: 0.8;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+
+
+.l-tits{
+    width: 350px;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    display: none;
+}
+
+.index-4 .icon.star_.h{
+    color: #ec6c00;
+}
+
+.l-content.h .l-list{
+    float: left;
+    width: 290px;
+    height: 325px;
+    /* padding-bottom: 20px; */
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 20px;
+} 
+
+.l-content.h .l-list .imgs_{
+    width: 290px;
+    height: 200px;
+}
+
+.l-content.h .l-list .imgs_ img{
+    width: 290px;
+    height: 200px;
+}
+
+.l-content.h .l-list .imgs_ .mes_{
+    width: 290px;
+}
+
+.l-content.h .inner-Con{
+    /* float: left; */
+    /* height: 152px; */
+    /* width: 558px; */
+    /* border-right: 1px solid #e3e3e3; */
+}
+
+.l-content.h  .mes_ .prices_{
+    display: none;
+}
+
+.l-content.h .inner-Con h4 span{
+    font-size: 16px;
+}
+
+.l-content.h .inner-Con  .l-pos_{
+    margin-bottom: 0px;
+}
+
+.l-content.h .inner-Con .tags{
+    background: #f7f7f7;
+}
+
+.l-content.h .l-tits{
+    display: block;
+}
+
+.add-Com{
+    width: 350px;
+    height: 100%;
+    display: block;
+}
+
+.l-content.h .add-Com{
+    display: none;
+}
+
+.l-content.h .add-Com{
+    display: block;
+}
+
+.add-Com .tit{
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
+    color: #ec6c00;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.add-Com .tit span{
+    font-size: 38px;
+}
+
+.l-content.h .compare_{
+    color: #999;
+    position: static;
+    display: none;
+}
+
+.l-list:hover .compare_{
+    display: block;
+}
+
+.compare_{
+    width: 80px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    color: #FFF;
+    margin: 0 auto;
+    display: none;
+}
+
+.compare_ .inp_{
+    padding-top: 2px;
+    float: left;
+    margin-right: 4px;
+}
+
+.compare_ span{
+    float: left;
+    display: block;
+}
