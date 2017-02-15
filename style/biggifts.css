@@ -25,8 +25,9 @@ body {
 .main-container .login {
 	color: white;
 	margin-top: 650px;
-	text-align: right;
 	font-size: 14px;
+	cursor: pointer;
+	text-indent: 66em;
 }
 
 .main-container .main-item {
@@ -64,9 +65,6 @@ body {
 	padding: 43px 35px;
 	background-color: white;
 }
-
-
-
 
 .main-container .main-item .index-1 {
 	color: #ca2a20;
@@ -428,6 +426,82 @@ body {
 	line-height: 50px;
 	margin: 20px auto 0 auto;
 	display: block;
+}
+
+.login-Modal .title {
+	margin-top: 80px;
+	color: #e10e01;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+
+.login-Modal form#login {
+	width: 367px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+.login-Modal form#login label {
+	position: relative;
+	width: 367px;
+	margin-bottom: 20px;
+}
+
+.login-Modal form#login label input {
+	display: inline-block;
+	width: 303px;
+}
+
+.login-Modal form#login .code {
+	width: 120px;
+	margin-right: 20px;
+}
+
+.login-Modal form#login .get-code {
+	width: 160px;
+	border: 1px solid #d9d9d9;
+	background: #fcfcfc;
+}
+
+.login-Modal form#login .buttons {
+	/*width: 300px;*/
+	height: 50px;
+	margin: 0 auto;
+}
+
+.login-Modal form#login .buttons button {
+	width: 140px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+	display: block;
+}
+
+.login-Modal form#login .buttons .confirm {
+	background-color: #ca2a20;
+	float: right;
+}
+
+.login-Modal form#login .buttons .cancel {
+	background-color: #e0e0e0;
+	float: right;
+	margin-left: 27px;
+}
+
+.login-Modal form#login label.error {
+    bottom: 0;
+    left: -10px;
+    position: absolute;
+	margin: 0px;
+	color: #e50000;
+	font-size: 12px;
+	height: 0;
+	text-indent: 6em;
 }
 
 .result-Modal .table tr,.friends-help-Modal .table tr {

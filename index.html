@@ -23,7 +23,7 @@
 	<![endif]-->
 	<body>
 		<div class="main-container">
-			<div class="login">欢迎 137****3366！[退出]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<div class="login">[登录]</div>
 			<div class="main-item">
 				<div class="header">已参加人数：88888</div>
 				<div class="item-container index-1">
@@ -135,6 +135,9 @@
 				<div>首页 | 优质个人| 品质公寓 | 地图找房 | 爱租金融 | 关于我们 <br> 苏ICP备05011367号-72  <br>苏公网安备 32</div>
 			</div>
 		</div>
+
+
+
 
 		<!-- 模态框 -->
 		<div class="modal fade bs-example-modal-sm success-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -259,6 +262,27 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal fade bs-example-modal-sm login-Modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="title">用户登录</div>
+					<div class="form-group">
+						<form id="login">
+							<label>手机号：
+								<input type="text" name="tel" class="form-control"></label>
+							<label>验证码：
+								<input type="text" name="code" class="form-control code">
+								<button class="btn get-code">获取验证码</button>
+							</label>
+							<div class="buttons">
+								<button type="submit" class="cancel" data-dismiss="modal">取消</button>
+								<button type="submit" class="confirm">确定</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.dataTables.min.js"></script>
@@ -320,6 +344,18 @@
 					}
 				})
 
+				var loginValidator = $('#login').validate({
+					submitHandler: function(form) {
+						alert('test')
+						// $(form).ajaxSubmit();
+					},
+					rules: {
+						code: "required",
+						tel: "required isTel",
+						// address:"required"
+					}
+				})
+
 				// 用来出表单对话框
 				$('.tttt').click(function() {
 					myValidator.resetForm();
@@ -330,6 +366,7 @@
 					});
 				})
 
+				// 	$('.login-Modal').modal('show')
 				// 	$('.no-chance2-Modal').modal('show')
 				// 	$('.no-chance1-Modal').modal('show')
 				// 	$('.invite-friends-Modal').modal('show')
